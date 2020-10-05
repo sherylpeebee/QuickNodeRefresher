@@ -1,6 +1,7 @@
 const path = require('path')
 const express = require("express");
 const app = express();
+const port = process.env.PORT || 3000;
 
 // console.log(__filename)
 // console.log( path.join(__dirname, '../public'))
@@ -22,4 +23,4 @@ app.get("/weather", (req, res)=>{
     res.send({location:"philly", forecast: "looks like rain, sucka"});
 })
 
-app.listen(3000);
+app.listen(port);
